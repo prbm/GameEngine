@@ -20,4 +20,9 @@ void Engine::input(){
 	}else{
 		bob.pararDireita();
 	}
+	if(Keyboard::isKeyPressed(Keyboard::Space)){
+        	bob.moverCima();
+	}else{
+        	bob.pararCima();
+    	}	
 }

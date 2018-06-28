@@ -9,6 +9,7 @@ class Bob
 private:
 	// posição do Bob
 	Vector2f posicao;
+    Vector2f posicaoInicial;
 	// sprite do Bob
 	Sprite sprite;
 	// textura do Bob
@@ -16,6 +17,7 @@ private:
 	// qual a direção que ele est indo?
 	bool paraEsquerda;
 	bool paraDireita;
+    bool paraCima;
 	// velocidade do Bob no cenário
 	float velocidade;
 
@@ -29,10 +31,12 @@ public:
 	// diz a direção para onde o Bob tem que ir
 	void moverEsquerda();
 	void moverDireita();
+    void moverCima();
 	
 	// diz quando o Bob tem que parar
 	void pararEsquerda();
 	void pararDireita();
+    void pararCima();
 	
 	// atualiza a posição inicial do Bob
 	void setPosicao(Vector2f res);
