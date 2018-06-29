@@ -60,7 +60,7 @@ AS       := as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Update.cpp$(ObjectSuffix) $(IntermediateDirectory)/Engine.cpp$(ObjectSuffix) $(IntermediateDirectory)/Bob.cpp$(ObjectSuffix) $(IntermediateDirectory)/Draw.cpp$(ObjectSuffix) $(IntermediateDirectory)/Input.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Update.cpp$(ObjectSuffix) $(IntermediateDirectory)/Engine.cpp$(ObjectSuffix) $(IntermediateDirectory)/Draw.cpp$(ObjectSuffix) $(IntermediateDirectory)/Input.cpp$(ObjectSuffix) $(IntermediateDirectory)/Character.cpp$(ObjectSuffix) 
 
 
 
@@ -120,14 +120,6 @@ $(IntermediateDirectory)/Engine.cpp$(DependSuffix): Engine.cpp
 $(IntermediateDirectory)/Engine.cpp$(PreprocessSuffix): Engine.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Engine.cpp$(PreprocessSuffix) Engine.cpp
 
-$(IntermediateDirectory)/Bob.cpp$(ObjectSuffix): Bob.cpp $(IntermediateDirectory)/Bob.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/paulo/estudos/games/GameEngine/GameEngine/Bob.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Bob.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Bob.cpp$(DependSuffix): Bob.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Bob.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Bob.cpp$(DependSuffix) -MM Bob.cpp
-
-$(IntermediateDirectory)/Bob.cpp$(PreprocessSuffix): Bob.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Bob.cpp$(PreprocessSuffix) Bob.cpp
-
 $(IntermediateDirectory)/Draw.cpp$(ObjectSuffix): Draw.cpp $(IntermediateDirectory)/Draw.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/paulo/estudos/games/GameEngine/GameEngine/Draw.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Draw.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Draw.cpp$(DependSuffix): Draw.cpp
@@ -143,6 +135,14 @@ $(IntermediateDirectory)/Input.cpp$(DependSuffix): Input.cpp
 
 $(IntermediateDirectory)/Input.cpp$(PreprocessSuffix): Input.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Input.cpp$(PreprocessSuffix) Input.cpp
+
+$(IntermediateDirectory)/Character.cpp$(ObjectSuffix): Character.cpp $(IntermediateDirectory)/Character.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/paulo/estudos/games/GameEngine/GameEngine/Character.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Character.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Character.cpp$(DependSuffix): Character.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Character.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Character.cpp$(DependSuffix) -MM Character.cpp
+
+$(IntermediateDirectory)/Character.cpp$(PreprocessSuffix): Character.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Character.cpp$(PreprocessSuffix) Character.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

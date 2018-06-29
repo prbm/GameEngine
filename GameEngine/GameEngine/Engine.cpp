@@ -14,10 +14,11 @@ Engine::Engine()
 	backgroundTexture.loadFromFile("images/background.jpg");
 	backgroundSprite.setTexture(backgroundTexture);
 	
-	// corrige a posição do Bob
+	// corrige a posição do Character
 	if(resolucao.x!=400 || resolucao.y!=800){
 		bob.setPosicao(resolucao);
 	}
+    	bob.setPular(true); // informa que o Character pode pular
 }
 
 void Engine::start(){

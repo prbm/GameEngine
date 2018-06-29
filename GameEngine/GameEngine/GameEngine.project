@@ -8,13 +8,14 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="CharacterState.h"/>
+    <File Name="Character.cpp"/>
+    <File Name="Character.h"/>
     <File Name="Draw.cpp"/>
     <File Name="Update.cpp"/>
     <File Name="Input.cpp"/>
     <File Name="Engine.cpp"/>
     <File Name="Engine.h"/>
-    <File Name="Bob.cpp"/>
-    <File Name="Bob.h"/>
     <File Name="main.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">

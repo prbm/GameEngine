@@ -1,7 +1,7 @@
 #ifndef ENGINE_H
 #define ENGINE_H
 #include <SFML/Graphics.hpp>
-#include "Bob.h"
+#include "Character.h"
 
 using namespace sf;
 
@@ -15,8 +15,8 @@ private:
 	Sprite backgroundSprite;
 	Texture backgroundTexture;
 	
-	// Cria uma instância da classe Bob
-	Bob bob;
+	// Cria uma instância da classe Character
+	Character bob;
 	
 	// cria as funções para uso interno
 	void input();
